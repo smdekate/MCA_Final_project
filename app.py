@@ -2,7 +2,7 @@ import pickle
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
-model = pickle.load(open('./models/rm_model.pkl', 'rb'))
+model = pickle.load(open('./models/rf_model.pkl', 'rb'))
 tfidf = pickle.load(open('./models/tfidf_vect.pkl','rb'))
 
 @app.route('/')
