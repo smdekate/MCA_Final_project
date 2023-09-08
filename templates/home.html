@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fake News Detector</title>
+
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1><sapn class="heading-black">Fake News</sapn> <sapn class="heading-green">Detection System</sapn></h1>
+        <p class="title-text">Never fall pray to FAKE NEWS</p>
+      </header>
+
+      <form class="form" action="{{ url_for('predict') }}" method="POST">
+        <textarea class="textarea round-border" rows="10" placeholder="Enter your article here" name="news" align="center" required></textarea>
+        <br />
+          <button class="btn round-border" type="submit" >Predict</button>
+
+      </form>
+    </div>
+  
+  </body>
+</html>
